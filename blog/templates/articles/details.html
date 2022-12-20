@@ -1,0 +1,24 @@
+{% extends 'base.html' %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+{% block title %}
+    Article detail
+{% endblock %}
+
+{% block body %}
+    <h1>Articles:</h1>
+    <h1>{{ article_name.text }}</h1>
+    <h2><a href="{{ url_for('user.get_user_pk', pk=article_name.author) }}">author</a></h2>
+
+{% endblock %}
+
+
+

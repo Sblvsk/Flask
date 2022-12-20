@@ -20,3 +20,10 @@ def get_user_pk(pk: int):
     if user_pk:
         return render_template('users/details.html', user_name=user_pk)
     raise NotFound()
+
+@user.route('/name/<int:pk>')
+def get_user_name(pk: int):
+    user_pk = USERS.get(pk)
+    if user_pk:
+        return user_pk
+    raise NotFound()
