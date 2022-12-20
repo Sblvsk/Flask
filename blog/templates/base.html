@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <title>
         {% block title %}
-        Title
+            title
         {% endblock %}
     </title>
+    {% block css %}{% endblock %}
 </head>
 <body>
-    <div>
-        {% block body %}
-        Body
-        {% endblock %}
-    </div>
-
-
+{% block body %}
+    body
+{% endblock %}
+{% block js %}{% endblock %}
 </body>
 </html>
