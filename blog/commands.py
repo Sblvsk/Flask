@@ -6,9 +6,8 @@ from Flask.blog.extensions import db
 
 @click.command('init-db')
 def init_db():
-    from Flask.wsgi import app
-
     # import models for creating tables
+    #from Flask.wsgi import app
     from Flask.blog.models import User
 
     # db.create_all(app=app)

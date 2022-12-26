@@ -7,6 +7,7 @@ from Flask.blog.models import User
 
 def create_app() -> Flask:
     app = Flask(__name__)
+
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/Flask.blog.db"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.init_app(app)
